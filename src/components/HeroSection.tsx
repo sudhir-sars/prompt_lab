@@ -78,9 +78,7 @@ export default function HeroSection() {
               <div className="flex min-h-[560px]">
                 {/* Sidebar */}
                 <div className="hidden md:flex flex-col w-[200px] border-r border-border bg-[#fafafa] py-3 px-2 shrink-0">
-                  <div className="flex items-center px-2 mb-4">
-                    <Image src="/app-logo.png" alt="Prompt Lab" width={90} height={22} className="h-5 w-auto" />
-                  </div>
+
                   <div className="space-y-0.5 text-[12px]">
                     <SidebarItem label="Dashboard" />
                     <SidebarItem label="Prompts" active />
