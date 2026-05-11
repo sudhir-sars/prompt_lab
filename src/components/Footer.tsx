@@ -3,6 +3,26 @@ import { Button } from "@/components/ui/button";
 import { RiFlaskLine } from "react-icons/ri";
 import { RiTwitterXLine, RiLinkedinBoxLine } from "react-icons/ri";
 
+const productLinks = [
+  { label: "Features", href: "/#features" },
+  { label: "Pricing", href: "/pricing" },
+  { label: "Changelog", href: "/changelog" },
+  { label: "API Docs", href: "/docs" },
+];
+
+const companyLinks = [
+  { label: "About", href: "#" },
+  { label: "Blog", href: "#" },
+  { label: "Careers", href: "#" },
+  { label: "Contact", href: "/contact" },
+];
+
+const legalLinks = [
+  { label: "Privacy", href: "/privacy" },
+  { label: "Terms", href: "/terms" },
+  { label: "Security", href: "/security" },
+];
+
 export default function Footer() {
   return (
     <footer className="border-t border-border py-12 bg-background">
@@ -16,7 +36,7 @@ export default function Footer() {
               </div>
               <span className="text-[14px] font-semibold text-foreground">PromptLab</span>
             </div>
-            <p className="text-[12px] text-muted-foreground  leading-relaxed">
+            <p className="text-[12px] text-muted-foreground leading-relaxed">
               The safe way to manage AI prompts in production.
             </p>
           </div>
@@ -24,33 +44,33 @@ export default function Footer() {
           {/* Links */}
           <div className="grid grid-cols-2 sm:grid-cols-3 gap-8">
             <div>
-              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground  mb-4">Product</h4>
+              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4">Product</h4>
               <ul className="space-y-2.5">
-                {['Features', 'Pricing', 'Changelog', 'Roadmap'].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[13px] text-muted-foreground  hover:text-foreground transition-colors">{item}</Link>
+                {productLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">{item.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground  mb-4">Company</h4>
+              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4">Company</h4>
               <ul className="space-y-2.5">
-                {['About', 'Blog', 'Careers', 'Contact'].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[13px] text-muted-foreground  hover:text-foreground transition-colors">{item}</Link>
+                {companyLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">{item.label}</Link>
                   </li>
                 ))}
               </ul>
             </div>
 
             <div>
-              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground  mb-4">Legal</h4>
+              <h4 className="text-[12px] font-semibold uppercase tracking-wider text-muted-foreground mb-4">Legal</h4>
               <ul className="space-y-2.5">
-                {['Privacy', 'Terms', 'Security'].map((item) => (
-                  <li key={item}>
-                    <Link href="#" className="text-[13px] text-muted-foreground  hover:text-foreground transition-colors">{item}</Link>
+                {legalLinks.map((item) => (
+                  <li key={item.label}>
+                    <Link href={item.href} className="text-[13px] text-muted-foreground hover:text-foreground transition-colors">{item.label}</Link>
                   </li>
                 ))}
               </ul>
@@ -60,16 +80,16 @@ export default function Footer() {
 
         {/* Bottom Bar */}
         <div className="border-t border-border pt-8 flex flex-col sm:flex-row items-center justify-between gap-4">
-          <p className="text-[12px] text-muted-foreground ">&copy; 2025 PromptLab, Inc. All rights reserved.</p>
+          <p className="text-[12px] text-muted-foreground">&copy; 2025 PromptLab, Inc. All rights reserved.</p>
           <div className="flex items-center gap-1">
             <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
               <Link href="#" aria-label="Twitter / X">
-                <RiTwitterXLine className="text-muted-foreground  text-sm" />
+                <RiTwitterXLine className="text-muted-foreground text-sm" />
               </Link>
             </Button>
             <Button variant="ghost" size="icon" className="h-8 w-8" asChild>
               <Link href="#" aria-label="LinkedIn">
-                <RiLinkedinBoxLine className="text-muted-foreground  text-sm" />
+                <RiLinkedinBoxLine className="text-muted-foreground text-sm" />
               </Link>
             </Button>
           </div>

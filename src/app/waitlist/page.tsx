@@ -38,8 +38,8 @@ export default function WaitlistPage() {
         <div className="mx-auto max-w-7xl px-6 flex items-center justify-between">
           <p className="text-[12px] text-muted-foreground ">&copy; 2025 PromptLab, Inc.</p>
           <div className="flex items-center gap-4">
-            <Link href="#" className="text-[12px] text-muted-foreground  hover:text-foreground">Privacy</Link>
-            <Link href="#" className="text-[12px] text-muted-foreground  hover:text-foreground">Terms</Link>
+            <Link href="/privacy" className="text-[12px] text-muted-foreground hover:text-foreground">Privacy</Link>
+            <Link href="/terms" className="text-[12px] text-muted-foreground hover:text-foreground">Terms</Link>
           </div>
         </div>
       </footer>
