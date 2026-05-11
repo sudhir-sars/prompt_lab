@@ -1,7 +1,7 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { RiArrowRightLine, RiArrowLeftLine, RiCheckLine } from "react-icons/ri";
+import { RiArrowLeftLine, RiCheckLine } from "react-icons/ri";
 import {
   WaitlistForm
 } from "./WaitlistForm";
@@ -11,11 +11,8 @@ export default function WaitlistPage() {
       {/* Minimal Nav */}
       <nav className="border-b border-border">
         <div className="mx-auto max-w-7xl px-6 h-16 flex items-center justify-between">
-          <Link href="/" className="flex items-center gap-2.5">
-            <div className="h-8 w-8 rounded-lg bg-foreground flex items-center justify-center">
-              <span className="text-white text-xs font-bold">PL</span>
-            </div>
-            <span className="text-[15px] font-semibold tracking-tight text-foreground">PromptLab</span>
+          <Link href="/" className="flex items-center">
+            <Image src="/app-logo.png" alt="Prompt Lab" width={120} height={32} className="h-8 w-auto" priority />
           </Link>
           <Button variant="ghost" size="sm" asChild className="gap-1.5 text-muted-foreground ">
             <Link href="/">

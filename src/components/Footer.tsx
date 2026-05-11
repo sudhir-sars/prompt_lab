@@ -1,6 +1,6 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
-import { RiFlaskLine } from "react-icons/ri";
 import { RiTwitterXLine, RiLinkedinBoxLine } from "react-icons/ri";
 
 const productLinks = [
@@ -30,11 +30,8 @@ export default function Footer() {
         <div className="flex flex-col md:flex-row items-start justify-between gap-8 mb-12">
           {/* Brand */}
           <div className="max-w-xs">
-            <div className="flex items-center gap-2 mb-4">
-              <div className="flex h-7 w-7 items-center justify-center rounded-md bg-foreground">
-                <RiFlaskLine className="text-white text-sm" />
-              </div>
-              <span className="text-[14px] font-semibold text-foreground">PromptLab</span>
+            <div className="flex items-center mb-4">
+              <Image src="/app-logo.png" alt="Prompt Lab" width={270} height={28} />
             </div>
             <p className="text-[12px] text-muted-foreground leading-relaxed">
               The safe way to manage AI prompts in production.

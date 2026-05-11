@@ -1,4 +1,5 @@
 import Link from "next/link";
+import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import {
@@ -77,11 +78,8 @@ export default function HeroSection() {
               <div className="flex min-h-[560px]">
                 {/* Sidebar */}
                 <div className="hidden md:flex flex-col w-[200px] border-r border-border bg-[#fafafa] py-3 px-2 shrink-0">
-                  <div className="flex items-center gap-2 px-2 mb-4">
-                    <div className="h-6 w-6 rounded-md bg-foreground flex items-center justify-center">
-                      <RiArrowRightLine className="text-white text-[10px]" />
-                    </div>
-                    <span className="text-[12px] font-semibold text-foreground">PromptLab</span>
+                  <div className="flex items-center px-2 mb-4">
+                    <Image src="/app-logo.png" alt="Prompt Lab" width={90} height={22} className="h-5 w-auto" />
                   </div>
                   <div className="space-y-0.5 text-[12px]">
                     <SidebarItem label="Dashboard" />
